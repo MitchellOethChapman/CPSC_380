@@ -6,8 +6,6 @@
 int main()
 {
     char *msg = "Hello World!\n";
-
-syscall(SYS_write, STDOUT_FILENO, msg, strlen(msg) )
-return 0;
-
+    syscall(SYS_write, STDOUT_FILENO, msg, strlen(msg));
+    return 0;
 }
