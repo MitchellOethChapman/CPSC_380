@@ -1,0 +1,6 @@
+// provides functions for the following file operations:
+- Create a new file.
+- Write data to the file.
+- Read data from the file.
+- Close the file.
+- Delete the file.
