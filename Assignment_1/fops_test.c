@@ -8,14 +8,22 @@ supported operations include:
     close <filename>: Close the file
     delete <filename>: Delete the file.
 */
-//#include <iostream>
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include "fops.h"
+#include "libfops.a"
+
 
 int main (int argc, char *argv[])
 {
+    char input[] = "";
+    while(1)
+    {
 
+        scanf("%s", &input);
+        
+        break;
+    }
     return 0;
 }

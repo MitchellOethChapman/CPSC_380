@@ -1,3 +1,14 @@
 {
-    "C_Cpp.default.compilerPath": "c:\\msys64\\mingw64.exe"
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "files.associations": {
+        "types.h": "c",
+        "stat.h": "c",
+        "unistd.h": "c",
+        "fops.h": "c",
+        "*.a": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "*.tcc": "c",
+        "fstream": "c"
+    }
 }
