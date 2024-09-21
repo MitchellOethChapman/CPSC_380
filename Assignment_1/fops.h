@@ -2,6 +2,7 @@
 #define FOPS_H
 #include <unistd.h>
 #include <sys/stat.h>
+#include <sys/types.h>
 
 int create_file(const char *filename, int flags, mode_t mode);
 ssize_t write_to_file(int fd, const void *buf, size_t count);
