@@ -6,4 +6,3 @@ Provides functions for the following file operations:
 - Close the file.
 - Delete the file.
 */
-
