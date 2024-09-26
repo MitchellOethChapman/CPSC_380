@@ -9,6 +9,7 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "*.tcc": "c",
-        "fstream": "c"
+        "fstream": "c",
+        "pthread.h": "c"
     }
 }
