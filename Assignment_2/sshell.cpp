@@ -24,6 +24,7 @@ int main()
 
         fgets(*args, sizeof(args), stdin); // read the command line arguments to args[0]
         // printf("%s", args[0]);
+        args[0][strcspn(args[0], "\n")] = 0; // removing newline character from end of the user input
 
         char *token = strtok(args[0], " "); // using " " to split up the arguments
         int num_args = 0; // counting the number of arguments
@@ -35,8 +36,9 @@ int main()
 
         // Checking whether the parent should wait for the child to finish
         int should_wait = 1;
-        if (args[num_args - 1] == "&") {
+        if (strcmp(args[num_args - 1], "&") == 0) {
             should_wait = 0;
+            printf("will wait\n");
         }
         // end of user input
 
