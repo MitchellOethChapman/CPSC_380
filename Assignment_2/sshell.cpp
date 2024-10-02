@@ -22,6 +22,8 @@ int main()
             return 1;
         }
 
+        // Handle if args is empty first
+
         fgets(*args, sizeof(args), stdin); // read the command line arguments to args[0]
         // printf("%s", args[0]);
         args[0][strcspn(args[0], "\n")] = 0; // removing newline character from end of the user input
