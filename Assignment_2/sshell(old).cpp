@@ -15,15 +15,28 @@ int main()
         printf("osh>");
         fflush(stdout);
 
+        // fd_set set;
+        // int isData = select(STDIN_FILENO + 1, &set, NULL, NULL, NULL);
+        // if (isData < 0) {
+        //     perror("no data");
+        //     continue;
+        // }
+
+        // if (stdin == NULL) {
+        //     perror("Unable to allocate memory");
+        //     continue;
+        // }
+        // Handle if args is empty first
+
         // Allocate memory for the command line arguments
         args[0] = (char *)malloc(MAX_LINE * sizeof(char));
-        if (args[0] == NULL) {
-            perror("Unable to allocate memory");
-            return 1;
-        }
 
-        fgets(*args, sizeof(args), stdin); // read the command line arguments to args[0]
-        
+        // read the command line arguments to args[0]
+        if (fgets(*args, sizeof(args), stdin) == NULL) {
+            printf("\n");
+            continue;
+        }
+        // printf("%s", args[0]);
         args[0][strcspn(args[0], "\n")] = 0; // removing newline character from end of the user input
 
         char *token = strtok(args[0], " "); // using " " to split up the arguments
