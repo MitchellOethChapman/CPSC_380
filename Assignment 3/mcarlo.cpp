@@ -21,6 +21,7 @@ void main(int argc, char *argv[])
         // generate random point and create thread
         int x = random_double() * 2.0 - 1.0;
         int y = random_double() * 2.0 - 1.0;
+        // run evaluation on a thread
     }
     res = pthread_create(&evalInsideCircle, NULL, eval_in_circle, &numPoints);
     if (res != 0) {
@@ -30,8 +31,6 @@ void main(int argc, char *argv[])
 
     pthread_join(evalInsideCircle, NULL); // joining the thread
 
-    
-        
     exit(EXIT_SUCCESS);
 }
 
@@ -39,7 +38,7 @@ void *eval_in_circle(void *points) {
     // int x = *(int *) points; // ?
     // int y = points[1];
     // if (sqrt(x*x + y*y) < 1.0 ) {
-        
+
     // }
 }
 
@@ -48,3 +47,4 @@ double random_double()
 {
     return random() / ((double)RAND_MAX + 1);
 }
+
